@@ -23,8 +23,7 @@ namespace GitHub_User_Activity_CLI
         private static string FormatPushEvent(GitHubEvent ev)
         {
             // payload.commits is an array
-            if (ev.Payload.TryGetProperty("commits", out JsonElement commits)
-                && commits.ValueKind == JsonValueKind.Array)
+            if (ev.Payload.TryGetProperty("commits", out JsonElement commits) && commits.ValueKind == JsonValueKind.Array)
             {
                 var count = commits.GetArrayLength();
                 var plural = count == 1 ? "commit" : "commits";
@@ -38,8 +37,7 @@ namespace GitHub_User_Activity_CLI
         {
             // payload.action is usually "opened", "closed", "reopened"
             string action = "acted on";
-            if (ev.Payload.TryGetProperty("action", out JsonElement actionElement)
-                && actionElement.ValueKind == JsonValueKind.String)
+            if (ev.Payload.TryGetProperty("action", out JsonElement actionElement) && actionElement.ValueKind == JsonValueKind.String)
             {
                 action = actionElement.GetString() ?? "acted on";
             }
