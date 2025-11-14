@@ -3,7 +3,7 @@ using System.Text.Json;
 
 namespace GitHub_User_Activity_CLI
 {
-    public class GithubClient
+    public class GitHubClient
     {
         private readonly HttpClient _httpClient;
         private static readonly JsonSerializerOptions _jsonOptions = new JsonSerializerOptions
@@ -11,7 +11,7 @@ namespace GitHub_User_Activity_CLI
             PropertyNameCaseInsensitive = true
         };
 
-        public GithubClient(HttpClient httpClient)
+        public GitHubClient(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }
