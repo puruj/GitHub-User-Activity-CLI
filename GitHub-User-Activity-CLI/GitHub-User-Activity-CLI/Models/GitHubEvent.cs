@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text.Json;
 
 namespace GitHub_User_Activity_CLI.Models
 {
-    internal class GitHubEvent
+    public class GitHubEvent
     {
+        public string Type { get; set; } = string.Empty;
+        public GitHubRepo Repo { get; set; } = new GitHubRepo();
+        public JsonElement Payload { get; set; }
     }
 }

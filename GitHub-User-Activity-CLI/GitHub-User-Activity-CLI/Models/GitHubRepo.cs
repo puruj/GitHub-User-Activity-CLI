@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GitHub_User_Activity_CLI.Models
+﻿namespace GitHub_User_Activity_CLI.Models
 {
-    internal class GitHubRepo
+    public class GitHubRepo
     {
+        public string Name { get; set; } = string.Empty;
     }
 }
