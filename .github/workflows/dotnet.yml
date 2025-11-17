@@ -21,12 +21,12 @@ jobs:
 
       - name: Restore
         run: dotnet restore
-        working-directory: GitHub_User_Activity_CLI
+        working-directory: GitHub-User-Activity-CLI
 
       - name: Build
         run: dotnet build --configuration Release --no-restore
-        working-directory: GitHub_User_Activity_CLI
+        working-directory: GitHub-User-Activity-CLI
 
       - name: Test
         run: dotnet test --configuration Release --no-build --verbosity normal
-        working-directory: GitHub_User_Activity_CLI
+        working-directory: GitHub-User-Activity-CLI
