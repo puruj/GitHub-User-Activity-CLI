@@ -156,7 +156,6 @@ namespace GitHubUserActivity.Tests
             Assert.Equal("PushEvent", events[0].Type);
             Assert.Equal("user/repo", events[0].Repo.Name);
 
-            // optional: verify it called the right URL
             Assert.Equal("https://api.github.com/users/some-user/events", handler.LastRequest!.RequestUri!.ToString());
         }
 
