@@ -11,7 +11,8 @@ public static class Program
         if (args.Length == 0)
         {
             PrintUsage();
-            return 1; // missing username
+            // missing username
+            return 1;
         }
 
         if (args[0] is "--help" or "-h")
