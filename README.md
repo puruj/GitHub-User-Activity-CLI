@@ -8,7 +8,7 @@ A .NET 8 command-line tool that fetches recent public events for a given GitHub 
 - Network access to `api.github.com`
 
 ## Getting Started
-
+https://roadmap.sh/projects/github-user-activity
 Clone the repository and restore dependencies:
 
 ```bash
